@@ -1,31 +1,45 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app dark class="black" id="app">
+    <v-flex class="pa-5" style="font-size: 2em; position: absolute; top: 0; left: 0; z-index: 999;">
+      <h1>Something</h1>
+    </v-flex>
+
+    <v-layout column id="info" class="height" style="background: -webkit-linear-gradient(to right, #232526, #414345); z-index: 0;">
+      <span class="hidden-sm-and-down my-auto mx-auto" style="font-size: 3em; text-shadow: 0 0 1em white">Fullstack
+        <h1 style="z-index: 1">Web Developer</h1>
+      </span>
+      <h1 style="z-index: 1; font-size: 2em;  text-shadow: 0 0 1em white; text-align: center;" class="hidden-md-and-up my-auto mx-auto">Fullstack Web Developer</h1>
+    </v-layout>
+
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+export default {
+  name: 'App',
+  data () {
+    return {
+      //
+    }
+  }
 }
-#nav {
-  padding: 30px;
-}
+</script>
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+<style media="screen">
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+  * {
+    font-family: 'Montserrat'; color: #444;
+  }
+  ::-webkit-scrollbar{
+    width: 0;
+  }
+  .height {
+    height: 100vh;
+  }
+  .round1 {
+    border-radius: 1em;
+  }
+  .round2 {
+    border-radius: 2em;
+  }
 </style>
